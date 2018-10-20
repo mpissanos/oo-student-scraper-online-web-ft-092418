@@ -1,4 +1,4 @@
-
+require 'pry'
 
 class Student
 
@@ -9,6 +9,7 @@ class Student
   def initialize(student_hash)
     student_hash.each do |key, v| 
       self.send("#{key}=", v)
+      binding.pry
     end
     @@all << self
   end
